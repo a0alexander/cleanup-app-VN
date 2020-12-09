@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Creater_Dashboard"
+    android:background="@drawable/edit_prof">
+
+
+    <Button
+        android:id="@+id/signout1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@drawable/square_button_login"
+        android:paddingHorizontal="15dp"
+        android:text="sign out"
+        android:textColor="@android:color/white"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.339" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="239dp"
+        android:layout_height="80dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardPreventCornerOverlap="true"
+
+
+        app:contentPadding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLya"
+        app:layout_constraintEnd_toStartOf="@+id/signout1"
+        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/signout1"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingStart="10dp">
+
+            <ImageView
+                android:id="@+id/userImage_admin"
+                android:layout_width="133dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icons8_cat_profile_60px"
+
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingStart="5dp">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-light"
+
+                    android:paddingBottom="3dp"
+                    android:text="Hello there,"
+                    android:textAlignment="textStart"
+                    android:textSize="12sp"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/users_name_info_creator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:maxEms="9"
+                    android:maxLines="3"
+
+                    android:text="Users Name"
+                    android:textAlignment="textStart"
+                    android:textSize="15sp"
+                    android:textStyle="bold|italic" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/createSite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="112dp"
+        android:background="@drawable/login_button_main"
+        android:paddingHorizontal="15dp"
+        android:text="Create Site"
+        android:textColor="@android:color/white"
+        android:textStyle="bold|italic"
+        android:visibility="invisible"
+
+        app:layout_constraintEnd_toEndOf="@+id/signout1"
+        app:layout_constraintTop_toTopOf="@+id/viewPublicSites" />
+
+    <Button
+        android:id="@+id/viewPublicSites"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/login_button_main"
+        android:paddingHorizontal="15dp"
+        android:text="View Public Sites"
+        android:textColor="@android:color/white"
+        android:textStyle="bold|italic"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/createSite"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLya"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_person_pin_black_24dp"
+            android:drawablePadding="5dp"
+            android:paddingLeft="5dp"
+            android:text="View Public Sites"
+            android:textAlignment="textStart"
+            android:textColor="#80000000"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/viewsitesRecycler_creator"
+                android:layout_width="match_parent"
+                android:layout_height="136dp"
+                android:layout_weight="1.6"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardtohide2_creator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:elevation="6dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="10dp"
+
+
+                app:cardPreventCornerOverlap="true"
+                app:contentPadding="5dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView123"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:padding="2dp"
+                        app:srcCompat="@drawable/people_public"
+
+                        />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingVertical="5dp"
+                        android:text="Public Sites will appear Here"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
+                        android:textStyle="italic"
+
+
+                        />
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_person_pin_black_24dp"
+            android:drawablePadding="5dp"
+            android:paddingLeft="5dp"
+            android:text="My Sites"
+            android:textAlignment="textStart"
+            android:textColor="#80000000"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+        <LinearLayout
+            android:id="@+id/mysiterecycler_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/eventRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="136dp"
+                android:layout_weight="1.6">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardtohide1_creator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:elevation="6dp"
+                android:visibility="gone"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="10dp"
+
+
+                app:cardPreventCornerOverlap="true"
+                app:contentPadding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:padding="10dp"
+                        app:srcCompat="@drawable/leader_image"
+
+                        />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingVertical="5dp"
+                        android:text="Sites You Create will appear Here"
+                        android:textAlignment="center"
+                        android:textSize="15sp"
+                        android:textStyle="italic"
+
+
+                        />
+                </LinearLayout>
+
+
+                >
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

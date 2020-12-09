@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/mainactive"
+
+        android:scaleType="fitXY"/>
+
+    <LinearLayout
+        android:layout_width="338dp"
+        android:layout_height="530dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        >
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
+
+            <EditText
+                android:id="@+id/firstName"
+                android:layout_width="145dp"
+                android:layout_height="50dp"
+                android:layout_column="0"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/login_main"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed-light"
+                android:hint="First Name"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <EditText
+                android:id="@+id/lastName"
+                android:layout_width="145dp"
+                android:layout_height="50dp"
+                android:layout_column="1"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/login_main"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed-light"
+                android:hint="Last Name"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp">
+
+            <EditText
+                android:id="@+id/Birthday"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+
+                android:layout_column="0"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/login_main"
+                android:ems="10"
+                android:focusable="false"
+                android:fontFamily="sans-serif-condensed-light"
+                android:hint="Birthday "
+                android:inputType="date|datetime"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+            <Spinner
+                android:id="@+id/genderSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_column="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:background="@drawable/login_main"
+                android:clipToPadding="true"
+                android:fontFamily="sans-serif-condensed-light"
+                android:textStyle="italic" />
+        </TableRow>
+
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_main"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="Phone"
+            android:inputType="phone"
+            android:phoneNumber="true"
+            android:textAlignment="center"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_main"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="email"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textStyle="italic" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_main"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed-light"
+            android:hint="password"
+            android:inputType="textPersonName"
+            android:password="true"
+            android:textAlignment="center"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/signUpButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/login_button_main"
+            android:text="Sign Up"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/signInButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_login"
+            android:text="sign in"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
